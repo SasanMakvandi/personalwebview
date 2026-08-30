@@ -1,13 +1,24 @@
-# Portfolio site
+# Sasan Makvandi — Portfolio
 
-Vite + React + Tailwind CSS. Fully static — no backend, no database.
+Personal portfolio site, styled as a retro Windows XP desktop — a sticky "whoami.txt" sidebar next to scrollable windows for education/skills/certs, work experience, projects, and web design work, plus a taskbar and a small easter egg.
 
-## Develop
+Fully static: no backend, no database, no server-side code.
+
+## Tech stack
+
+- [Vite](https://vitejs.dev/) — build tooling and dev server
+- [React](https://react.dev/) 19
+- [Tailwind CSS](https://tailwindcss.com/) 3
+- [lucide-react](https://lucide.dev/) — icons
+
+## Getting started
 
 ```bash
 npm install
 npm run dev
 ```
+
+The dev server runs at `http://localhost:5173` with hot module reload.
 
 ## Build
 
@@ -15,34 +26,37 @@ npm run dev
 npm run build
 ```
 
-Outputs static files to `dist/`. Preview the production build locally with `npm run preview`.
+Outputs a static production build to `dist/`. Preview it locally with:
 
-## Deploy
+```bash
+npm run preview
+```
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for the full walkthrough (GitHub push, Vercel/Netlify setup, custom domain, rollbacks).
+## Project structure
 
-## Known placeholders
+```
+src/
+  App.jsx        # main component — all sections, content data, and layout
+  main.jsx        # React entry point
+  index.css       # Tailwind entry
+  assets/         # project preview images and photos, imported directly in App.jsx
+public/
+  favicon.svg
+```
 
-- **GitHub profile link** (sidebar) — now points to `https://github.com/SasanMakvandi`. Done.
-- **Project repo links** — matched against your GitHub repos:
-  - Habit Reminder System → [Water-Reminder-](https://github.com/SasanMakvandi/Water-Reminder-) (site copy describes a Java backend; the actual repo is Python — same project, just flagging the mismatch in case the bullets need updating)
-  - ADS-B Flight Radar → [ADSB-Radar](https://github.com/SasanMakvandi/ADSB-Radar) (exact match)
-  - Streaming Platform → **no matching public repo found** on your account. Left unlinked — if it's private, under a teammate's account, or named differently, let me know the URL and I'll wire it up the same way (add a `repo:` field to that project in `src/App.jsx`).
-- **Headshot** — the photo slot was removed from the sidebar entirely (LinkedIn required login to pull it, so nothing was fabricated). To add one later: put the image in `src/assets/`, `import` it (same pattern as `fredPreview` / `bonPreview` / `aquariumPhoto`), and re-add an `<img>` above the name in the `whoami.txt` window in [src/App.jsx](src/App.jsx).
-- **Advertising agency project card** — intentionally left as `wip` with no link until that site ships.
-- Note: the handoff brief mentioned a résumé download button in the nav — the `App.jsx` you provided doesn't actually contain one (no résumé link, no separate taskbar-Start-button-triggered menu). Nothing was invented to fill that gap; let me know if you want one added and where.
+Section content (skills, experience, projects, web design work) is defined as plain data objects near the top of `src/App.jsx` — update those to change copy without touching layout code.
 
-Contact email (`sasan.makvandi@hotmail.com`) and LinkedIn URL are real and were left untouched.
+## Deployment
 
-## About the images
+See [DEPLOYMENT.md](DEPLOYMENT.md) for the full walkthrough: pushing to GitHub, deploying to Vercel or Netlify, attaching a custom domain, and rolling back a bad deploy.
 
-The original artifact embedded three images (two site previews, one aquarium photo) as inline base64 `data:` URIs directly in `App.jsx`, which made the file ~150KB of mostly base64 text. They've been extracted to real files in `src/assets/` and are pulled in via normal `import` statements instead. This is better for a real build:
+## Notes
 
-- Vite fingerprints and serves them as separate cacheable files instead of bloating the JS bundle — the built JS is ~220KB instead of carrying the images inline.
-- They benefit from the browser's normal image cache across visits, and gzip/Brotli less well as base64 text.
+- `lucide-react` is pinned to `0.577.0`. Versions `1.0` and later removed several brand icons (`Github`, `Linkedin`) used in the sidebar — upgrading past `1.0` requires swapping those out first.
+- Project preview images and the aquarium photo live in `src/assets/` and are pulled in via standard `import` statements, so Vite fingerprints and caches them separately from the JS bundle.
 
-No action needed on this — it's done. If you ever add more images, drop them in `src/assets/` and `import` them the same way.
+## Roadmap
 
-## Dependencies
-
-- `lucide-react` is pinned to `0.577.0`. Note: 1.0 removed brand icons (`Github`, `Linkedin`) that this design uses — upgrading past 1.0 will break the build unless those icons are swapped for something else first.
+- [ ] Add a headshot to the sidebar
+- [ ] Link a repository for the Streaming Platform project once one is public
+- [ ] Add a preview image and link for the advertising agency site once it ships
