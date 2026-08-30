@@ -1,8 +1,6 @@
 # Sasan Makvandi — Portfolio
 
-Personal portfolio site, styled as a retro Windows XP desktop — a sticky "whoami.txt" sidebar next to scrollable windows for education/skills/certs, work experience, projects, and web design work, plus a taskbar and a small easter egg.
-
-Fully static: no backend, no database, no server-side code.
+Personal portfolio site, styled as a retro Windows XP desktop.
 
 ## Tech stack
 
@@ -45,10 +43,6 @@ public/
 ```
 
 Section content (skills, experience, projects, web design work) is defined as plain data objects near the top of `src/App.jsx` — update those to change copy without touching layout code.
-
-## Deployment
-
-See [DEPLOYMENT.md](DEPLOYMENT.md) for the full walkthrough: pushing to GitHub, deploying to Vercel or Netlify, attaching a custom domain, and rolling back a bad deploy.
 
 ## Notes
 
