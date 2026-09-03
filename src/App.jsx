@@ -81,6 +81,17 @@ const projects = [
     ],
   },
   {
+    name: "ReelSimple",
+    tag: "Startup · Launching Fall 2026",
+    repo: "https://github.com/SasanMakvandi/AI-Advertising-Landing-Page",
+    bullets: [
+      "Co-founded and building ReelSimple with a small team of friends — an AI-engineered, humanly-directed content studio for ad campaigns, product photography, and real estate listing photos.",
+      "Built the marketing site with Next.js 15, TypeScript, Tailwind CSS, and Framer Motion, including a draggable before/after reveal for showcased work.",
+      "Structured pricing into three tiers — AI-only content, AI plus a directed shoot, and full campaign management — to fit different budgets and needs.",
+      "Currently pre-launch and finishing up client work ahead of a fall 2026 launch.",
+    ],
+  },
+  {
     name: "ADS-B Flight Radar",
     tag: "Personal · In Progress",
     repo: "https://github.com/SasanMakvandi/ADSB-Radar",
@@ -110,10 +121,10 @@ const webWork = [
     image: bonPreview,
   },
   {
-    name: "———",
-    url: "coming soon",
-    desc: "Next up: a site for an advertising agency. In progress.",
-    status: "wip",
+    name: "ReelSimple",
+    url: "ai-advertising-landing-page.vercel.app",
+    desc: "Marketing site for an AI-engineered, humanly-directed content studio — ad creative, product shots, and listing photos at a fraction of a full shoot's cost.",
+    status: "live",
   },
 ];
 
@@ -256,7 +267,7 @@ export default function Portfolio() {
             max-height: calc(100vh - 48px); overflow-y: auto;
             padding: 32px 8px 32px;
           }
-          .main-col { flex: 1 1 0%; min-width: 0; padding: 32px 32px 128px; }
+          .main-col { flex: 1 1 0%; min-width: 0; padding: 56px 32px 128px; }
         }
       `}</style>
 
