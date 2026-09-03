@@ -53,4 +53,3 @@ Section content (skills, experience, projects, web design work) is defined as pl
 
 - [ ] Add a headshot to the sidebar
 - [ ] Link a repository for the Streaming Platform project once one is public
-- [ ] Add a preview screenshot for the ReelSimple card in Web Design Work

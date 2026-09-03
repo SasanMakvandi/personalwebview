@@ -3,6 +3,7 @@ import { Github, Linkedin, Mail, ExternalLink, User, Briefcase, FolderKanban, Gl
 import fredPreview from "./assets/fred-preview.jpg";
 import bonPreview from "./assets/bon-preview.jpg";
 import aquariumPhoto from "./assets/aquarium-photo.jpg";
+import reelsimplePreview from "./assets/reelsimple-preview.jpg";
 
 const skills = {
   "Core Languages": ["Python", "JS", "C", "C#", "Java", "HTML", "CSS", "R", "PHP"],
@@ -58,6 +59,18 @@ const experience = [
 
 const projects = [
   {
+    name: "ReelSimple",
+    tag: "Startup · Launching Fall 2026",
+    repo: "https://github.com/SasanMakvandi/AI-Advertising-Landing-Page",
+    badge: "what I'm working on right now!!!",
+    bullets: [
+      "Co-founded and building ReelSimple with a small team of friends — an AI-engineered, humanly-directed content studio for ad campaigns, product photography, and real estate listing photos.",
+      "Built the marketing site with Next.js 15, TypeScript, Tailwind CSS, and Framer Motion, including a draggable before/after reveal for showcased work.",
+      "Structured pricing into three tiers — AI-only content, AI plus a directed shoot, and full campaign management — to fit different budgets and needs.",
+      "Currently pre-launch and finishing up client work ahead of a fall 2026 launch.",
+    ],
+  },
+  {
     name: "Habit Reminder System",
     tag: "Raspberry Pi Deployment",
     repo: "https://github.com/SasanMakvandi/Water-Reminder-",
@@ -78,17 +91,6 @@ const projects = [
       "Implemented RESTful API communication between client and server components to support dynamic content updates.",
       "Collaborated in a team of 6 using Agile methodologies, participating in sprint planning, task breakdown, and iterative feature development.",
       "Managed version control and code integration using Git and GitFlow, resolving merge conflicts and maintaining code consistency across branches.",
-    ],
-  },
-  {
-    name: "ReelSimple",
-    tag: "Startup · Launching Fall 2026",
-    repo: "https://github.com/SasanMakvandi/AI-Advertising-Landing-Page",
-    bullets: [
-      "Co-founded and building ReelSimple with a small team of friends — an AI-engineered, humanly-directed content studio for ad campaigns, product photography, and real estate listing photos.",
-      "Built the marketing site with Next.js 15, TypeScript, Tailwind CSS, and Framer Motion, including a draggable before/after reveal for showcased work.",
-      "Structured pricing into three tiers — AI-only content, AI plus a directed shoot, and full campaign management — to fit different budgets and needs.",
-      "Currently pre-launch and finishing up client work ahead of a fall 2026 launch.",
     ],
   },
   {
@@ -125,6 +127,7 @@ const webWork = [
     url: "ai-advertising-landing-page.vercel.app",
     desc: "Marketing site for an AI-engineered, humanly-directed content studio — ad creative, product shots, and listing photos at a fraction of a full shoot's cost.",
     status: "live",
+    image: reelsimplePreview,
   },
 ];
 
@@ -190,6 +193,20 @@ function Callout({ children }) {
       <span>💡</span>
       <span>{children}</span>
     </div>
+  );
+}
+
+function Balloon({ children }) {
+  return (
+    <span className="relative inline-flex items-center ml-1">
+      <span
+        className="absolute -left-[5px] top-1/2 -translate-y-1/2 w-2 h-2 rotate-45 bg-[#FFFFC2] border-l border-b border-[#D9B93F]"
+        aria-hidden
+      />
+      <span className="font-xp text-[10px] font-bold text-[#6B5A00] bg-[#FFFFC2] border border-[#D9B93F] rounded px-2 py-0.5 shadow-[0_2px_4px_rgba(0,0,0,0.25)] whitespace-nowrap">
+        {children}
+      </span>
+    </span>
   );
 }
 
@@ -380,13 +397,14 @@ export default function Portfolio() {
               {projects.map((p) => (
                 <div key={p.name}>
                   <div className="flex items-baseline justify-between flex-wrap gap-x-3">
-                    <h3 className="font-display font-bold text-[#12203A] flex items-center gap-1.5">
+                    <h3 className="font-display font-bold text-[#12203A] flex items-center gap-1.5 flex-wrap">
                       {p.name}
                       {p.repo && (
                         <a href={p.repo} className="text-[#3A3F55] hover:text-[#1560D4]" aria-label={`${p.name} on GitHub`}>
                           <Github size={14} />
                         </a>
                       )}
+                      {p.badge && <Balloon>{p.badge}</Balloon>}
                     </h3>
                     <span className="font-xp text-xs text-[#6B2FB5]">{p.tag}</span>
                   </div>
