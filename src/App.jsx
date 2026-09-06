@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Github, Linkedin, Mail, ExternalLink, User, Briefcase, FolderKanban, Globe, Fish, X, Square, Minus, Image as ImageIcon } from "lucide-react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import fredPreview from "./assets/fred-preview.jpg";
 import bonPreview from "./assets/bon-preview.jpg";
 import aquariumPhoto from "./assets/aquarium-photo.jpg";
@@ -507,6 +508,7 @@ export default function Portfolio() {
           </div>
         </div>
       )}
+      <SpeedInsights />
     </div>
   );
 }
