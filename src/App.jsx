@@ -4,13 +4,14 @@ import fredPreview from "./assets/fred-preview.jpg";
 import bonPreview from "./assets/bon-preview.jpg";
 import aquariumPhoto from "./assets/aquarium-photo.jpg";
 import reelsimplePreview from "./assets/reelsimple-preview.jpg";
+import gorzPreview from "./assets/gorz-preview.jpg";
+import privateKombatPreview from "./assets/privatekombat-preview.jpg";
 
 const skills = {
-  "Core Languages": ["Python", "JS", "C", "C#", "Java", "HTML", "CSS", "R", "PHP"],
+  Languages: ["Python", "JavaScript", "C", "C#", "Java", "HTML", "CSS", "R", "PHP"],
   Frameworks: ["Node.js", "React.js", "Django", "Express.js", "Angular", "Bootstrap"],
-  Database: ["Mongo DB", "SQL", "Neo4j"],
-  "Tools and Workflow": ["Git", "JIRA", "Notion", "Agile Methodologies"],
-  "Product & Team Management": ["Process Optimization", "Technical Oversight", "QA & Testing", "Feature Implementation", "Stakeholder Communication"],
+  Database: ["MongoDB", "SQL", "Neo4j"],
+  "Tools & Workflow": ["Git", "JIRA", "Notion", "Agile Methodologies"],
 };
 
 const certifications = [{ name: "AWS Certified Cloud Practitioner", year: "2025" }];
@@ -20,15 +21,28 @@ const experience = [
     role: "QA & Development Coordinator",
     org: "SporDee",
     location: "Remote",
-    period: "May '24 — Present",
+    period: "May '24 — Jul '26",
     bullets: [
-      "Own end-to-end QA for web and mobile application features, performing functional, regression, integration, exploratory, and post-release testing across staging and production.",
-      "Developed automated tests for critical user workflows using Selenium, expanding regression coverage and reducing repetitive manual validation.",
+      "Coordinated with a core group of ~4 leads across a 30+ person contracted development team in Sri Lanka and internal stakeholders in Canada, translating business requirements and user-reported issues into actionable technical specifications.",
+      "Owned end-to-end QA for web and mobile application features, performing functional, regression, integration, exploratory, and post-release testing across staging and production.",
+      "Built Selenium test automation for critical user workflows, expanding regression coverage and reducing repetitive manual validation.",
       "Built lightweight QA and development utilities using JavaScript to automate test preparation, application checks, and recurring validation tasks.",
-      "Tested REST APIs through Postman, validating authentication, payloads, error handling, data consistency, and integration with front-end features.",
-      "Investigated defects using browser developer tools, network requests, logs, and API responses, isolating root causes and providing developers with actionable findings.",
-      "Contributed to application development, working through Git-based development workflows.",
-      "Documented and triaged defects with reproducible steps, severity, expected and actual results, environment details, and supporting technical evidence.",
+      "Validated REST APIs through Postman, covering authentication, payloads, error handling, and data consistency.",
+      "Investigated defects using browser developer tools, network requests, and logs, isolating root cause and delivering actionable findings to developers.",
+      "Identified and escalated a high-volume API abuse issue affecting service reliability, coordinating stakeholders to keep the fix prioritized through to resolution.",
+      "Contributed to backend development using Node.js and Express, building out features including direct messaging (WebSockets), Reels, and passkey authentication (WebAuthn/FIDO2), through Git-based workflows.",
+      "Documented and triaged defects with reproducible steps, severity, and supporting technical evidence, catching 5-6 issues per week during peak development periods that would otherwise have gone unnoticed.",
+    ],
+  },
+  {
+    role: "Freelance Web Designer",
+    org: "Independent",
+    location: "Remote",
+    period: "Ongoing",
+    bullets: [
+      "Run client discovery conversations to scope business needs, then choose the stack and architecture accordingly; delivered 5 sites to date, ranging from simple landing pages to full e-commerce and commercial websites.",
+      "Build custom backend dashboards so clients can independently manage and update their own site content after launch.",
+      "Advise clients post-launch on growing their site's reach through on-page optimization and paid advertising campaigns, delivering significant gains in impressions and traffic.",
     ],
   },
   {
@@ -38,8 +52,7 @@ const experience = [
     period: "Jun '22 — Jul '24",
     bullets: [
       "Led daily operations in a high-volume environment, managing workflow, inventory, and team execution under time-sensitive conditions.",
-      "Supervised and supported staff during peak hours, ensuring consistency in service and operational efficiency.",
-      "Trained new employees and reinforced procedures to maintain performance and accountability.",
+      "Supervised and trained staff during peak hours, reinforcing procedures to maintain consistency, performance, and accountability.",
       "Resolved day-to-day operational issues quickly, strengthening problem-solving and decision-making under pressure.",
     ],
   },
@@ -49,10 +62,9 @@ const experience = [
     location: "Richmond Hill, ON",
     period: "Jun '20 — Jun '22",
     bullets: [
-      "Taught programming fundamentals including object-oriented programming, logic development, and problem-solving.",
-      "Guided students through debugging exercises, helping them understand code behavior and execution flow.",
-      "Designed structured lesson plans tailored to individual learning pace and technical understanding.",
-      "Coordinated scheduling and student-instructor assignments based on progress and compatibility.",
+      "Taught programming fundamentals, including object-oriented programming, logic development, and problem-solving.",
+      "Guided students through debugging exercises, building their understanding of code behavior and execution flow.",
+      "Designed structured lesson plans and coordinated scheduling across a roster of students and instructors.",
     ],
   },
 ];
@@ -60,14 +72,14 @@ const experience = [
 const projects = [
   {
     name: "ReelSimple",
-    tag: "Startup · Launching Fall 2026",
+    tag: "Co-Founder · Ongoing",
     repo: "https://github.com/SasanMakvandi/AI-Advertising-Landing-Page",
     badge: "what I'm working on right now!!!",
     bullets: [
-      "Co-founded and building ReelSimple with a small team of friends — an AI-engineered, humanly-directed content studio for ad campaigns, product photography, and real estate listing photos.",
-      "Built the marketing site with Next.js 15, TypeScript, Tailwind CSS, and Framer Motion, including a draggable before/after reveal for showcased work.",
-      "Structured pricing into three tiers — AI-only content, AI plus a directed shoot, and full campaign management — to fit different budgets and needs.",
-      "Currently pre-launch and finishing up client work ahead of a fall 2026 launch.",
+      "Co-founded ReelSimple, a business I'm building with some friends: an AI-assisted photo and video production studio that pairs AI-generated concepts with human creative direction to cut production costs for advertising, real estate, and product content.",
+      "Architected the core product pipeline chaining multiple AI models: a language model breaks a client's prompt into scripted scenes, which then drive separate generation APIs for reference imagery, video, audio, and subtitles.",
+      "Built the web application using Next.js 15 (App Router), TypeScript, and Tailwind CSS, with Framer Motion for interaction and scroll effects.",
+      "Implemented user authentication and a protected client dashboard using Auth.js and Prisma.",
     ],
   },
   {
@@ -128,6 +140,20 @@ const webWork = [
     desc: "Marketing site for an AI-engineered, humanly-directed content studio — ad creative, product shots, and listing photos at a fraction of a full shoot's cost.",
     status: "live",
     image: reelsimplePreview,
+  },
+  {
+    name: "GORZ",
+    url: "gorz.ca",
+    desc: "Site for a carbon fiber aero parts maker — parts browsable by manufacturer, product pages with pricing, build listings, and an inquiry form.",
+    status: "live",
+    image: gorzPreview,
+  },
+  {
+    name: "Private Kombat",
+    url: "privatekombat.ca",
+    desc: "Site for a small combat academy in Vaughan — class schedule, pricing, and coach bio, built to get people booking a first class.",
+    status: "live",
+    image: privateKombatPreview,
   },
 ];
 
@@ -320,8 +346,9 @@ export default function Portfolio() {
                 </div>
               </div>
               <p className="text-sm text-[#3A3F55] leading-relaxed">
-                CS & Math grad doing QA and technical coordination — I test things, break things,
-                and increasingly build the things myself. Based in the GTA.
+                CS & Math grad working across QA engineering, software development, and technical
+                coordination — I test things, break things, and increasingly build the things myself.
+                Based in the GTA.
               </p>
               <div className="flex gap-2">
                 <a href="mailto:sasan.makvandi@hotmail.com" className="btn3d w-9 h-9 flex items-center justify-center rounded border border-[#8FAFD9]" style={{ background: "linear-gradient(180deg,#FFFFFF,#DCE9FB)" }} aria-label="Email">
@@ -422,12 +449,14 @@ export default function Portfolio() {
 
           <Window id="webwork" title="Web Design Work">
             <p className="text-sm text-[#3A3F55] leading-relaxed mb-4">
-              Alongside my full-time work, I design and build websites for small businesses —
-              from a first conversation about what the business needs, through design and build,
-              to a site that's actually hosted and live. If you're looking for a site that
-              represents your business well and brings people in the door, that's what I do.
+              I freelance as a web designer and developer, building sites for small businesses —
+              from a first discovery conversation about what the business needs, through design and
+              build, to a site that's hosted and live, with a custom dashboard so clients can update
+              their own content. I also advise on on-page optimization and paid advertising once it's
+              launched. If you're looking for a site that represents your business well and brings
+              people in the door, that's what I do.
             </p>
-            <div className="grid sm:grid-cols-3 gap-4 mb-5">
+            <div className="grid sm:grid-cols-2 gap-4 mb-5">
               {webWork.map((w) => (
                 <div
                   key={w.name}
