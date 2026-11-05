@@ -124,35 +124,35 @@ const webWork = [
   {
     name: "Built By Fred",
     url: "builtbyfred.ca",
-    desc: "Site for a renovation business — built to bring in leads and make the work look as good as it is.",
+    desc: "Site for a renovation business, built to bring in leads and make the work look as good as it is.",
     status: "live",
     image: fredPreview,
   },
   {
     name: "Studio Bon",
     url: "studiobon.ca",
-    desc: "Site for a Pilates studio — clean, calm, and built to get people booking a class.",
+    desc: "Site for a Pilates studio. Clean, calm, and built to get people booking a class.",
     status: "live",
     image: bonPreview,
   },
   {
     name: "ReelSimple",
     url: "ai-advertising-landing-page.vercel.app",
-    desc: "Marketing site for an AI-engineered, humanly-directed content studio — ad creative, product shots, and listing photos at a fraction of a full shoot's cost.",
+    desc: "Marketing site for an AI-engineered, humanly-directed content studio. Ad creative, product shots, and listing photos at a fraction of a full shoot's cost.",
     status: "live",
     image: reelsimplePreview,
   },
   {
     name: "GORZ",
     url: "gorz.ca",
-    desc: "Site for a carbon fiber aero parts maker — parts browsable by manufacturer, product pages with pricing, build listings, and an inquiry form.",
+    desc: "Site for a carbon fiber aero parts maker, with parts browsable by manufacturer, product pages with pricing, build listings, and an inquiry form.",
     status: "live",
     image: gorzPreview,
   },
   {
     name: "Private Kombat",
     url: "privatekombat.ca",
-    desc: "Site for a small combat academy in Vaughan — class schedule, pricing, and coach bio, built to get people booking a first class.",
+    desc: "Site for a small combat academy in Vaughan, with a class schedule, pricing, and coach bio, built to get people booking a first class.",
     status: "live",
     image: privateKombatPreview,
   },
@@ -348,7 +348,7 @@ export default function Portfolio() {
               </div>
               <p className="text-sm text-[#3A3F55] leading-relaxed">
                 CS & Math grad working across QA engineering, software development, and technical
-                coordination — I test things, break things, and increasingly build the things myself.
+                coordination. I test things, break things, and increasingly build the things myself.
                 Based in the GTA.
               </p>
               <div className="flex gap-2">
@@ -450,10 +450,10 @@ export default function Portfolio() {
 
           <Window id="webwork" title="Web Design Work">
             <p className="text-sm text-[#3A3F55] leading-relaxed mb-4">
-              I freelance as a web designer and developer, building sites for small businesses —
-              from a first discovery conversation about what the business needs, through design and
-              build, to a site that's hosted and live, with a custom dashboard so clients can update
-              their own content. I also advise on on-page optimization and paid advertising once it's
+              I freelance as a web designer and developer, building sites for small businesses.
+              I handle everything from a first discovery conversation about what the business needs,
+              through design and build, to a site that's hosted and live, with a custom dashboard so
+              clients can update their own content. I also advise on on-page optimization and paid advertising once it's
               launched. If you're looking for a site that represents your business well and brings
               people in the door, that's what I do.
             </p>
